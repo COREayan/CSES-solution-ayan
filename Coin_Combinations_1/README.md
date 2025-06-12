@@ -27,7 +27,7 @@ Print one integer: the number of ways modulo 10^9+7.
 ## Example
 
 ### Input:
-3 9
+3 9 \n
 2 3 5
 
 ### Output:
