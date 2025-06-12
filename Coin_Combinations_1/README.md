@@ -26,11 +26,11 @@ Print one integer: the number of ways modulo 10^9+7.
 
 ## Example
 
-# Input:
+### Input:
 3 9
 2 3 5
 
-# Output:
+### Output:
 8
 
 Link: https://cses.fi/problemset/task/1635
