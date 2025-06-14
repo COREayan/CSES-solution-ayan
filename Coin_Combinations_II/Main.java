@@ -14,18 +14,20 @@ public class Main {
 			coins[i] = sc.nextInt();
 		}
 		
-		long[] dp = new long[x+1];
+		int[] dp = new int[x+1];
 		dp[0] = 1;
-		
-		for (int weight=1; weight<=x; weight++) {
-			for (int coin : coins) {
-				if (weight - coin >= 0) {
-					dp[weight] += dp[weight-coin];
+		/*
+			1. Task is to calculate distinct ways, we can sum up target using coins. 
+			we can not repeat. How to do it? 
+		*/
+		for (int coin : coins) {
+			for (int weight = 0; weight <= x; weight++) {
+				if (weight - coin >= 0) { // prevent out of bounds cases.
+					dp[weight] += dp[weight - coin];
 					dp[weight] %= MOD;
 				}
 			}
 		}
-		
 		System.out.println(dp[x]);
 	}
 }
